@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  index.html
+
+  <!-- <form action="{% url 'pjt1:create'%}">
+    <input type="text" name="create-title">
+    <input type="text" name="content" id="">
+    <input type="submit" value="리뷰 쓰기">
+  </form> -->
+  <p>
+    <a href="{% url 'pjt1:new' %}">리뷰 작성</a>
+  </p>
+  
+
+  {% for pjt in pjts %}
+  <p>{{ pjt.title}} - <a href="{% url 'pjt1:detail' pjt.pk %}">{{ pjt.content }}</a> - {{ pjt.created_at | date:"Y-m-d"}}
+    
+    
+
+
+
+  </p> 
+  {% endfor %}
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  edit.html
+  <p>{{ pjts.title}} - {{ pjts.content }}</p>
+  <form action="{% url 'pjt1:edit_method' pjts.pk%}">
+    <input type="text" name="update-title" value="{{ pjts.title}}">
+    <input type="text" name="update-content" value="{{ pjts.content }}">
+    <input type="submit" value="리뷰 수정">
+  </form>
+</body>
+</html>
