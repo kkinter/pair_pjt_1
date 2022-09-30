@@ -21,7 +21,11 @@
 
   {% for pjt in pjts %}
   <p>{{ pjt.title}} - <a href="{% url 'pjt1:detail' pjt.pk %}">{{ pjt.content }}</a> - {{ pjt.created_at | date:"Y-m-d"}}
-    
+  <table>
+    <th> 리뷰 번호</th>
+    <th></th>
+    <th></th>
+  </table>
     
 
 
